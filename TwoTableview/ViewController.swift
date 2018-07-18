@@ -41,7 +41,6 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellOne") as! CellOne
             return cell
         }else if tableView == tableview2 {
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellTwo") as! CellTwo
             return cell
 

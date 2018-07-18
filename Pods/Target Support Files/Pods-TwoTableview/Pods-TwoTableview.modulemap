@@ -1,0 +1,6 @@
+framework module Pods_TwoTableview {
+  umbrella header "Pods-TwoTableview-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -12,6 +12,7 @@
 		06AAA67920FF47BA009B7633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06AAA67720FF47BA009B7633 /* Main.storyboard */; };
 		06AAA67B20FF47BC009B7633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06AAA67A20FF47BC009B7633 /* Assets.xcassets */; };
 		06AAA67E20FF47BC009B7633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06AAA67C20FF47BC009B7633 /* LaunchScreen.storyboard */; };
+		10070DFCDB0F4C4F3D3F9CDF /* Pods_TwoTableview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401C53661A46618786C5B977 /* Pods_TwoTableview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		06AAA67A20FF47BC009B7633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06AAA67D20FF47BC009B7633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06AAA67F20FF47BC009B7633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32745FF92834D7648E804E76 /* Pods-TwoTableview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoTableview.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoTableview/Pods-TwoTableview.release.xcconfig"; sourceTree = "<group>"; };
+		401C53661A46618786C5B977 /* Pods_TwoTableview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoTableview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C66C7D451CF37ACF173FAF /* Pods-TwoTableview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoTableview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoTableview/Pods-TwoTableview.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10070DFCDB0F4C4F3D3F9CDF /* Pods_TwoTableview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				06AAA67220FF47BA009B7633 /* TwoTableview */,
 				06AAA67120FF47BA009B7633 /* Products */,
+				E626DEE728796389CB2435D7 /* Pods */,
+				773E0761A664363B09510CF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = TwoTableview;
 			sourceTree = "<group>";
 		};
+		773E0761A664363B09510CF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				401C53661A46618786C5B977 /* Pods_TwoTableview.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E626DEE728796389CB2435D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9C66C7D451CF37ACF173FAF /* Pods-TwoTableview.debug.xcconfig */,
+				32745FF92834D7648E804E76 /* Pods-TwoTableview.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06AAA68220FF47BC009B7633 /* Build configuration list for PBXNativeTarget "TwoTableview" */;
 			buildPhases = (
+				243566E6D6BE90CE138646B1 /* [CP] Check Pods Manifest.lock */,
 				06AAA66C20FF47BA009B7633 /* Sources */,
 				06AAA66D20FF47BA009B7633 /* Frameworks */,
 				06AAA66E20FF47BA009B7633 /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		243566E6D6BE90CE138646B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwoTableview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06AAA66C20FF47BA009B7633 /* Sources */ = {
@@ -278,16 +324,16 @@
 		};
 		06AAA68320FF47BC009B7633 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C66C7D451CF37ACF173FAF /* Pods-TwoTableview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TwoTableview/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TwoTableview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,16 +341,16 @@
 		};
 		06AAA68420FF47BC009B7633 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32745FF92834D7648E804E76 /* Pods-TwoTableview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TwoTableview/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TwoTableview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
